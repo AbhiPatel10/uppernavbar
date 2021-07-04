@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<div class="navbar-upper">
+  <a class="links" href="#">IEEE.org</a>
+  <a class="links" href="#">IEEE Xplore Digital Library</a>
+  <a class="links" href="#">IEEE Standard</a>
+  <a class="links" href="#">IEEE Spectrum</a>
+  <a class="links" href="#">More Sites</a>
+  <div class="dropdown-upper" id="dropdown-main">
+  <button class="dropbtn-upper" onclick="myFunction()">More Website
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="#">IEEE.org</a>
+    <a href="#">IEEE Xplore Digital Library</a>
+    <a href="#">IEEE Standard</a>
+    <a href="#">IEEE Spectrum</a>
+  </div>
+  </div> 
+</div>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn-upper')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
